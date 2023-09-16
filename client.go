@@ -21,7 +21,7 @@ const (
 	defaultUserAgent = "go-putio"
 	defaultMediaType = "application/json"
 	defaultBaseURL   = "https://api.put.io"
-	defaultUploadURL = "https://upload.put.io"
+	defaultUploadURL = "https://upload.put.io/v2/files/upload"
 	defaultTusURL    = "https://upload.put.io/files/"
 )
 
