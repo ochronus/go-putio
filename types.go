@@ -58,12 +58,12 @@ type Search struct {
 
 // Transfer represents a Put.io transfer state.
 type Transfer struct {
-	Availability   int    `json:"availability"`
-	CallbackURL    string `json:"callback_url"`
-	CreatedAt      *Time  `json:"created_at"`
-	CreatedTorrent bool   `json:"created_torrent"`
-	ClientIP       string `json:"client_ip"`
-
+	Availability      int    `json:"availability"`
+	CallbackURL       string `json:"callback_url"`
+	CreatedAt         *Time  `json:"created_at"`
+	CreatedTorrent    bool   `json:"created_torrent"`
+	ClientIP          string `json:"client_ip"`
+	CompletionPercent int    `json:"completion_percent"`
 	// nolint:godox
 	// FIXME: API returns either string or float non-deterministically.
 	// CurrentRatio       float32 `json:"current_ratio"`
@@ -76,6 +76,7 @@ type Transfer struct {
 	Extract            bool   `json:"extract"`
 	FileID             int64  `json:"file_id"`
 	FinishedAt         *Time  `json:"finished_at"`
+	Hash               string `json:"hash"`
 	ID                 int64  `json:"id"`
 	IsPrivate          bool   `json:"is_private"`
 	MagnetURI          string `json:"magneturi"`
